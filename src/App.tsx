@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Landing } from './components/landings/Landing';
 import { Counter } from './components/counter/Counter';
 import { JoinQueue } from "./views/JoinQueue/JoinQueue";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
