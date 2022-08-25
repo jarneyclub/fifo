@@ -1,4 +1,28 @@
+$backGround: #EBEEF5;
+
+
+
 .coursesListContainer {
   display: flex;
   flex-direction: column;
+  // justify-content: flex-start;
+  
+  // min-width: 300px;
+  margin: 7rem 14rem;
+}
+
+.coursesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  .coursesListContainer{
+      margin: 6rem 3rem;
+  }
+  .select {
+      width: 100%;
+  }
 }

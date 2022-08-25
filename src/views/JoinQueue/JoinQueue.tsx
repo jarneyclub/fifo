@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import styles from "./joinQueue.module.css";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -67,7 +67,7 @@ export function JoinQueue() {
           </a>
         </div>
         <div className={styles.header}>
-          <h3>Join Queue</h3>
+          <h2>Join Queue</h2>
           <h4>CS 11 Intro Computer Science</h4>
         </div>
         <div className={styles.divider}></div>

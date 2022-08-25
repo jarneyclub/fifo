@@ -1,15 +1,17 @@
 import React from 'react';
 
-import { Landing } from './components/landings/Landing';
+import { Landing } from './views/landings/Landing';
 import { Counter } from './components/counter/Counter';
 import { JoinQueue } from "./views/JoinQueue/JoinQueue";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import './App.module.scss';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<JoinQueue />}></Route>
+        <Route path="/" element={<Landing />}></Route>
         <Route path="/sign-up" element={<Counter />}></Route>
         <Route path="/sign-in" element={<Counter />}></Route>
         <Route path="/account" element={<Counter />}></Route>
