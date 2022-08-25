@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 import { CourseState } from './coursesSlice';
 
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import style from './Course.module.scss';
 
 type CourseProps = {
   courseInfo: CourseState,
+  customStyle: {
+    fontColor: {},
+    backgroundColor: {}
+  },
 }
 
 
 
-export function Course({courseInfo}: CourseProps) {
+export function Course({courseInfo, customStyle}: CourseProps) {
   const { id, code, name } = courseInfo;
   return (
-    <button className={ style.courseContainer } key={id}>
-      <div>
-        <h3>{ code }</h3>
-        <h4>{ name }</h4>
+    <button className={ style.courseContainer } style = {customStyle?.backgroundColor} key={id}>
+      <div className={ style.descriptionContainer }>
+        <h4 style={customStyle?.fontColor}>{ code }</h4>
+        <h6 style={customStyle?.fontColor}>{ name }</h6>
       </div>
+      <ArrowForwardIosIcon />
       
     </button>
   )
