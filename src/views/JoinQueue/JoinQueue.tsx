@@ -1,7 +1,8 @@
-import {useState} from "react";
+import { useState } from "react";
 import styles from "./joinQueue.module.css";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { BackBtn } from "../../components/BackBtn/BackBtn";
 
 export function JoinQueue() {
   const [debugClick, setDebugClick] = useState(false);
@@ -60,14 +61,9 @@ export function JoinQueue() {
   return (
     <div className={styles.container}>
       <div className={styles.joinQueue}>
-        <div className={styles.return}>
-          <a href="#">
-            <ArrowBackIcon sx={{ color: "#008CFF" }} />
-            <div>Queue</div>
-          </a>
-        </div>
+        <BackBtn path={"/user/student/comp40/check-queue"} text={"Queue"}/>
         <div className={styles.header}>
-          <h3>Join Queue</h3>
+          <h2>Join Queue</h2>
           <h4>CS 11 Intro Computer Science</h4>
         </div>
         <div className={styles.divider}></div>

@@ -26,23 +26,6 @@ body {
   margin: 3rem 14rem;
 }
 
-.return a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-}
-.return div {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 121.52%;
-  margin: 0 10px;
-  color: #606783;
-}
-
 .header {
   display: flex;
   flex-direction: column;

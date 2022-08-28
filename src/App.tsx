@@ -1,6 +1,7 @@
 import React from 'react';
 import { Counter } from './components/counter/Counter';
 import { JoinQueue } from "./views/JoinQueue/JoinQueue";
+import { SignIn } from "./views/SignIn/SignIn"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<JoinQueue />}></Route>
         <Route path="/sign-up" element={<Counter />}></Route>
-        <Route path="/sign-in" element={<Counter />}></Route>
+        <Route path="/sign-in" element={<SignIn />}></Route>
         <Route path="/account" element={<Counter />}></Route>
         <Route path="/user/courses" element={<Counter />}></Route>
         <Route path="/user/enrollment" element={<Counter />}></Route>
