@@ -60,13 +60,14 @@ export function JoinQueue() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.joinQueue}>
-        <BackBtn path={"/user/student/comp40/check-queue"} text={"Queue"}/>
-        <div className={styles.header}>
-          <h2>Join Queue</h2>
-          <h4>CS 11 Intro Computer Science</h4>
+      <div className={styles.header}>
+        <div className={styles.headerContainer}>
+          <BackBtn path={"/user/student/comp40/check-queue"} />
+          <h5>Join Queue - CS 11</h5>
+          <div className={styles.circle}></div>
         </div>
-        <div className={styles.divider}></div>
+      </div>
+      <div className={styles.joinQueue}>
         <div className={styles.content}>
           <form id="form" className={styles.form}>
             <div className={styles.selection}>
@@ -249,7 +250,7 @@ export function JoinQueue() {
                 ></textarea>
               </label>
             </div>
-            <div className={styles.selection}>
+            {/* <div className={styles.selection}>
               <label>
                 Best way to meet? <span className={styles.required}>*</span>{" "}
                 <br />
@@ -262,6 +263,40 @@ export function JoinQueue() {
                   <option value="Zoom">Zoom</option>
                   <option value="in-person">In-Person</option>
                 </select>
+              </label>
+            </div> */}
+            <div className={styles.selection}>
+              <label>
+                Best way to meet?
+                <br />
+                <div className={styles.inputBtn}>
+                  <label
+                    className={wrongClick ? styles.Clicked : styles.unClicked}
+                  >
+                    <input
+                      type="checkbox"
+                      name="secondAction"
+                      id="wrong"
+                      value="wrong"
+                      onClick={() => handleClick("Wrong")}
+                      required
+                    />
+                    <span>Zoom</span>
+                  </label>
+
+                  <label
+                    className={runtimeClick ? styles.Clicked : styles.unClicked}
+                  >
+                    <input
+                      type="checkbox"
+                      name="secondAction"
+                      id="runtime"
+                      value="runtime"
+                      onClick={() => handleClick("Runtime")}
+                    />
+                    <span>In-Person</span>
+                  </label>
+                </div>
               </label>
             </div>
             <div>

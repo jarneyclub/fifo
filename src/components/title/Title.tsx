@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 
-import style from './Title.module.scss'
+import style from './Title.module.css'
 
 
 const customStyle = {
