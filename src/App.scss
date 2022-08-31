@@ -28,7 +28,7 @@ $lightGray: #757B93;
   font-weight: 600;
   font-size: 25px;
   line-height: 130%;
-  color: #3A3A3C;
+  color: $darkGray;
 }
 
 @mixin Header2 {
@@ -36,7 +36,7 @@ $lightGray: #757B93;
   font-weight: 600;
   font-size: 19px;
   line-height: 28px;
-  color: #3A3A3C;
+  color: $darkGray;
 }
 
 @mixin Header3 {
@@ -44,7 +44,7 @@ $lightGray: #757B93;
     font-weight: 600;
     font-size: 17px;
     line-height: 130%;
-    color: #3A3A3C;
+    color: $darkGray;
 }
 
 @mixin BodyLarge {
@@ -52,7 +52,7 @@ $lightGray: #757B93;
     font-weight: 300;
     font-size: 19px;
     line-height: 28px;
-    color: #3A3A3C;
+    color: $darkGray;
 }
 
 @mixin BodyBold {
@@ -60,7 +60,7 @@ $lightGray: #757B93;
   font-weight: 600;
   font-size: 15px;
   line-height: 130%;
-  color: #3A3A3C;
+  color: $darkGray;
 }
 
 @mixin BodyNormal {
@@ -68,7 +68,7 @@ $lightGray: #757B93;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: #3A3A3C;
+  color: $darkGray;
 }
 
 @mixin BodySmall {
@@ -76,7 +76,7 @@ $lightGray: #757B93;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #3A3A3C;
+  color: $darkGray;
 }
 
 @mixin Subtitle {
@@ -84,7 +84,7 @@ $lightGray: #757B93;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  color: #3A3A3C;
+  color: $darkGray;
 }
 
 @mixin Button {
@@ -92,7 +92,7 @@ $lightGray: #757B93;
   font-weight: 600;
   font-size: 14px;
   line-height: 121.52%;
-  color: #3A3A3C;
+  color: $darkGray;
 }
 
 @mixin circle {
