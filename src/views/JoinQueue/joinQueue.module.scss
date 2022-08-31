@@ -1,21 +1,7 @@
-$backGround: #EBEEF5;
+@use "../../App";
 
 body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-.container {
-    background: $backGround;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-    min-height: 100vh;
+    @include App.body;
 }
 
 .form {
@@ -35,17 +21,16 @@ body {
     display: flex;
 
     background: #FFFFFF;
-    // background-color: pink;
     box-shadow: 0px 2px 7px rgba(191, 191, 191, 0.27);
 
     h5 {
         font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 21px;
-            text-align: center;
-            color: #3A3B3D;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        color: #3A3B3D;
     }
 }
 
@@ -55,7 +40,6 @@ body {
     align-items: center;
     width: 70%;
     justify-content: space-between;
-
 }
 
 .circle {

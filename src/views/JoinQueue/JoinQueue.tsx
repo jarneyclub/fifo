@@ -59,7 +59,7 @@ export function JoinQueue() {
   // }
 
   return (
-    <div className={styles.container}>
+    <div>
       <div className={styles.header}>
         <div className={styles.headerContainer}>
           <BackBtn path={"/user/student/comp40/check-queue"} />
