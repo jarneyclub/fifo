@@ -17,7 +17,7 @@ function App() {
         <Route path="/sign-up" element={<Counter />}></Route>
         <Route path="/sign-in" element={<SignIn />}></Route>
         <Route path="/account" element={<Counter />}></Route>
-        <Route path="/user/courses" element={<Counter />}></Route>
+        <Route path="/user/courses" element={<Landing />}></Route>
         <Route path="/user/enrollment" element={<Enroll />}></Route>
         <Route
           path="/user/student/comp40/check-queue"
