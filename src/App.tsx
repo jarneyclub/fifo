@@ -3,9 +3,11 @@ import React from 'react';
 import { Landing } from './views/landings/Landing';
 import { Counter } from './components/counter/Counter';
 import { JoinQueue } from "./views/JoinQueue/JoinQueue";
+import { SignIn } from "./views/SignIn/SignIn";
+import { Enroll } from "./views/enroll/Enroll";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import './App.module.scss';
+import './App.css';
 
 function App() {
   return (
@@ -13,10 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         <Route path="/sign-up" element={<Counter />}></Route>
-        <Route path="/sign-in" element={<Counter />}></Route>
+        <Route path="/sign-in" element={<SignIn />}></Route>
         <Route path="/account" element={<Counter />}></Route>
-        <Route path="/user/courses" element={<Counter />}></Route>
-        <Route path="/user/enrollment" element={<Counter />}></Route>
+        <Route path="/user/courses" element={<Landing />}></Route>
+        <Route path="/user/enrollment" element={<Enroll />}></Route>
         <Route
           path="/user/student/comp40/check-queue"
           element={<Counter />}

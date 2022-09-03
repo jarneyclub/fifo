@@ -1,0 +1,164 @@
+h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 125.02%;
+  color: #273255;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125.02%;
+  color: #273255;
+}
+
+h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 130%;
+  color: #273255;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 130%;
+  color: #3A3B3D;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h6 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  color: #7C839E;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.selection {
+  margin: 0.5rem 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #464646;
+  width: 100%;
+}
+.selection label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #3A3B3D;
+  color: #757B93;
+}
+
+.Header1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
+  color: #3A3B3D;
+  margin-bottom: 15px;
+}
+
+.required {
+  color: #008CFF;
+}
+
+.inputBtn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.inputBtn input {
+  position: absolute;
+  opacity: 0;
+}
+
+.unClicked {
+  padding: 15px 20px;
+  margin: 10px;
+  border: 1px solid #D9D9D9;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.Clicked {
+  padding: 15px 20px;
+  margin: 10px;
+  border: 1px solid #008CFF;
+  border-radius: 25px;
+  cursor: pointer;
+  background: #E5EBF9;
+  color: #008CFF !important;
+}
+
+.input {
+  background: #F6F5F6;
+  border: none;
+  border-radius: 15px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 1rem;
+  width: 95%;
+  margin-top: 10px;
+}
+
+.input:focus {
+  border: 1px solid #008CFF;
+  box-shadow: -2px 4px 10px rgba(191, 224, 255, 0.6);
+}
+
+.select {
+  background: #FFFFFF;
+  border: 0.9px solid #C2C2C2;
+  border-radius: 7px;
+  color: #5b5b5b;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0.5rem;
+  margin: 10px 0;
+  min-width: 10rem;
+  text-align: center;
+}
+
+.submitBtn {
+  background: #606783;
+  border: 2px solid #FFFFFF;
+  border-radius: 30px;
+  padding: 1.3rem 4rem;
+  color: white;
+  margin: 0 2rem 1rem 2rem;
+  cursor: pointer;
+}/*# sourceMappingURL=Form.module.css.map */

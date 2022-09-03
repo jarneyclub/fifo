@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 
-import style from './Title.module.scss'
+import style from './Title.module.css'
 
 
 const customStyle = {
@@ -20,6 +20,7 @@ const customStyle = {
   }
   
 }
+
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -30,17 +31,19 @@ const ResponsiveAppBar = () => {
 
 
   return (
-    <AppBar position="fixed" sx = {customStyle.title}>
+    <AppBar position="fixed" sx={customStyle.title}>
       <Container maxWidth="lg">
-        <Toolbar disableGutters sx = {customStyle.toolbar}>
+        <Toolbar disableGutters sx={customStyle.toolbar}>
           <h3>My Courses</h3>
           <Tooltip title="Add Course">
-            <button className = {style.button}>+ Add</button>
+            <a href="/user/enrollment">
+              <button className={style.button}>+ Add</button>
+            </a>
           </Tooltip>
           <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} >
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
+            <IconButton onClick={handleOpenUserMenu}>
+              <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+            </IconButton>
           </Tooltip>
         </Toolbar>
       </Container>

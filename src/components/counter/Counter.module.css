@@ -6,7 +6,7 @@
 
 .text {
   text-align: center;
-  color:rgb(108, 156, 229);
+  color: rgb(108, 156, 229);
   font-weight: bold;
   margin-top: 10rem;
   margin-bottom: 3rem;
@@ -26,11 +26,13 @@
   padding-left: 16px;
   padding-right: 16px;
   margin-top: 2px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .button {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: none;
   font-size: 32px;
   padding-left: 12px;
@@ -68,7 +70,7 @@
 }
 
 .asyncButton:after {
-  content: '';
+  content: "";
   background-color: rgba(112, 76, 182, 0.15);
   display: block;
   position: absolute;
@@ -84,4 +86,4 @@
   width: 0%;
   opacity: 1;
   transition: 0s;
-}
+}/*# sourceMappingURL=Counter.module.css.map */
