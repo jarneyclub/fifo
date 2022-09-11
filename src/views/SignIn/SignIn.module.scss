@@ -1,0 +1,74 @@
+@use "../../App";
+
+body {
+    @include App.body;
+}
+
+.container {
+    @include App.container;
+}
+
+.Header1 {
+    @include App.Header1;
+    margin-bottom: 5px;
+}
+
+.blue {
+    color: App.$blue;
+}
+
+.BodyBold {
+    @include App.BodyBold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 3rem;
+    height: auto;
+    width: 30%;
+}
+
+.illustration {
+    width: 100%;
+}
+
+.icon {
+    height: auto;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    height: 25px;
+    margin-right: 1rem;
+}
+
+.btn {
+    background-color: App.$blue;
+    @include App.Button;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px;
+    color: white;
+    padding: 15px 25px;
+    margin: 10px;
+    margin-top: 2rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .context {
+        width: 90%;
+    }
+    .illustration {
+        width: 70%;
+    }
+}

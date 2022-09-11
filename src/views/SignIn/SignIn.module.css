@@ -1,0 +1,147 @@
+h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 125.02%;
+  color: #273255;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125.02%;
+  color: #273255;
+}
+
+h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 130%;
+  color: #273255;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 130%;
+  color: #3A3B3D;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h6 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  color: #7C839E;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.container {
+  background: #FCFCFF;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.Header1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
+  color: #3A3A3C;
+  margin-bottom: 5px;
+}
+
+.blue {
+  color: #008CFF;
+}
+
+.BodyBold {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 130%;
+  color: #3A3A3C;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.context {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 3rem;
+  height: auto;
+  width: 30%;
+}
+
+.illustration {
+  width: 100%;
+}
+
+.icon {
+  height: auto;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  height: 25px;
+  margin-right: 1rem;
+}
+
+.btn {
+  background-color: #008CFF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 121.52%;
+  color: #3A3A3C;
+  border: 1px solid #FFFFFF;
+  border-radius: 40px;
+  color: white;
+  padding: 15px 25px;
+  margin: 10px;
+  margin-top: 2rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .context {
+    width: 90%;
+  }
+  .illustration {
+    width: 70%;
+  }
+}/*# sourceMappingURL=SignIn.module.css.map */
