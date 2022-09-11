@@ -1,0 +1,33 @@
+@use "../../App";
+
+body {
+    @include App.body;
+}
+
+.container {
+    @include App.container;
+    background: #F5F8FF;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background: pink;
+    margin-left: 1rem;
+    opacity: 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 75%;
+    }
+}
