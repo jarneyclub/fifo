@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
 import Emoji from "../emoji/emoji";
-import Tooltip from "@mui/material/Tooltip";
+import { EditMeet } from "../EditMeet/EditMeet"
 
 export function Form() {
     const [hwClick, setHwClick] = useState(false);
@@ -14,6 +14,8 @@ export function Form() {
     const [infiniteClick, setInfiniteClick] = useState(false);
     const [weirdClick, setWeirdClick] = useState(false);
     const [otherClick, setOtherClick] = useState(false);
+    const [zoomClick, setZoomClick] = useState(false);
+    const [inPersonClick, setInPersonClick] = useState(false);
 
   function handleClick(props: any) {
     if (props === "Hw") {
@@ -36,6 +38,16 @@ export function Form() {
       setInfiniteClick(!infiniteClick);
     } else {
       setOtherClick(!otherClick);
+    }
+  }
+
+  function handleMeet(props: any) {
+    if (props === "Zoom") {
+      setZoomClick(true);
+      setInPersonClick(false);
+    } else {
+      setZoomClick(false);
+      setInPersonClick(true);
     }
   }
 
@@ -213,54 +225,48 @@ export function Form() {
         </div>
       ) : null}
       <div className={styles.selection}>
-        <label>
-          Description <br />
-          <textarea
-            className={styles.input}
-            name="description"
-            rows={3}
-            cols={30}
-            placeholder="Please give a brief summary"
-          ></textarea>
-        </label>
+        <div className={styles.Header1}>Add Problem Description</div>
+        <textarea
+          className={styles.input}
+          name="description"
+          rows={3}
+          cols={30}
+          placeholder="Please give a brief summary"
+        ></textarea>
       </div>
       <div className={styles.selection}>
-        <div className={styles.Header1}>What’s the best way to meet?</div>
+        <div className={styles.Header1}>Best way to meet</div>
         <div className={styles.inputBtn}>
-          <label className={wrongClick ? styles.Clicked : styles.unClicked}>
+          <label className={zoomClick ? styles.Clicked : styles.unClicked}>
             <input
               type="checkbox"
-              name="secondAction"
-              id="wrong"
-              value="wrong"
-              onClick={() => handleClick("Wrong")}
+              name="meet"
+              id="zoom"
+              value="zoom"
+              onClick={() => handleMeet("Zoom")}
               required
             />
             <span>Zoom</span>
           </label>
 
-          <label className={runtimeClick ? styles.Clicked : styles.unClicked}>
+          <label className={inPersonClick ? styles.Clicked : styles.unClicked}>
             <input
               type="checkbox"
-              name="secondAction"
-              id="runtime"
-              value="runtime"
-              onClick={() => handleClick("Runtime")}
+              name="meet"
+              id="inPerson"
+              value="inPerson"
+              onClick={() => handleMeet("InPerson")}
             />
             <span>In-Person</span>
           </label>
         </div>
+        {zoomClick ? <EditMeet meetMode="Zoom" /> : null}
+        {inPersonClick ? <EditMeet meetMode="InPerson" /> : null}
       </div>
-      <div>
-        <Tooltip title="Submit">
-          <a href="/user/student/comp40/check-queue">
-            <input
-              className={styles.submitBtn}
-              type="submit"
-              value="Submit"
-            ></input>
-          </a>
-        </Tooltip>
+      <div className={styles.submitContainer}>
+        <a className={styles.submitBtn} href="/user/student/comp40/check-queue">
+          <input type="submit" value="Submit"></input>
+        </a>
       </div>
     </div>
   );
