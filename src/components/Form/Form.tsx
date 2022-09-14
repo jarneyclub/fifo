@@ -239,7 +239,7 @@ export function Form() {
         <div className={styles.inputBtn}>
           <label className={zoomClick ? styles.Clicked : styles.unClicked}>
             <input
-              type="checkbox"
+              type="radio"
               name="meet"
               id="zoom"
               value="zoom"
@@ -251,7 +251,7 @@ export function Form() {
 
           <label className={inPersonClick ? styles.Clicked : styles.unClicked}>
             <input
-              type="checkbox"
+              type="radio"
               name="meet"
               id="inPerson"
               value="inPerson"
