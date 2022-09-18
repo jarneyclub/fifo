@@ -1,0 +1,11 @@
+@use "../../App";
+
+body {
+    @include App.body;
+}
+
+.Header1 {
+    @include App.Header1;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}

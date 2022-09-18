@@ -25,7 +25,7 @@ function App() {
         <Route path="/sign-in" element={<LoginPage />}></Route>
         <Route path="/account" element={<Counter />}></Route>
         {/* implementation to protect unauthorized access */}
-        <Route path="/user/courses" element={<LoginPage />}></Route>
+        <Route path="/user/courses" element={<Landing />}></Route>
         <Route path="/user/enrollment" element={<Enroll />}></Route>
         <Route
           path="/user/student/comp40/check-queue"
