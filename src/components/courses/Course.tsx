@@ -18,7 +18,8 @@ type CourseProps = {
 export function Course({courseInfo, customStyle}: CourseProps) {
   const { id, code, name } = courseInfo;
   return (
-    <button className={ style.courseContainer } style = {customStyle?.backgroundColor} key={id}>
+    <button className={ style.courseContainer }  key={id}>
+      {/* <img src=""> */}
       <div className={ style.descriptionContainer }>
         <h4 style={customStyle?.fontColor}>{ code }</h4>
         <h6 style={customStyle?.fontColor}>{ name }</h6>

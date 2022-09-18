@@ -17,6 +17,14 @@
   color: #008CFF;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px;
+
+
+}
+
 @media (min-width: 768px) {
   .coursesListContainer {
     margin: 6rem 3rem;

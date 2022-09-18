@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SignIn.module.css";
+import styles from "./SignIn.module.scss";
 import img from "../../assets/illustration/Illustration_Home_SignOn.png";
 import GoogleIcon from "../../assets/icons/Google.png";
 import { useNavigate } from "react-router-dom";
@@ -44,16 +44,26 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = (props) => {
           Welcome to <span className={styles.blue}>FIFO</span>
         </div>
         <div className={styles.BodyBold}>Get your questions answered</div>
+<<<<<<< HEAD:src/views/SignIn/SignIn.js
         {/* TODO merge the button and href into functional links */}
         <button className="signin-with-google-btn"
         onClick={() => signInWithGoogle()} disabled={authing}>Continue with Google</button>
         <a className={styles.btn} href="/user/enrollment">
+=======
+        <button className={styles.btn} onClick={() => signInWithGoogle()} disabled={authing}>
+>>>>>>> 64055ceb82f55ccf7081ef2cf58312d555b62d25:src/views/SignIn/SignIn.tsx
           <img
             className={styles.icon}
             alt={"Google Icon"}
             src={GoogleIcon}
+<<<<<<< HEAD:src/views/SignIn/SignIn.js
           ></img>
         </a>
+=======
+          /> Continue with your university credential!
+        </button>
+        
+>>>>>>> 64055ceb82f55ccf7081ef2cf58312d555b62d25:src/views/SignIn/SignIn.tsx
       </div>
     </div>
   );
