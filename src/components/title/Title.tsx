@@ -34,15 +34,13 @@ const ResponsiveAppBar = () => {
     <AppBar position="fixed" sx={customStyle.title}>
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={customStyle.toolbar}>
-          <h3>My Courses</h3>
-          <Tooltip title="Add Course">
-            <a href="/user/enrollment">
-              <button className={style.button}>+ Add</button>
-            </a>
-          </Tooltip>
+          <div className={style.main}>
+            <h6>FIFO Queue</h6>
+            <h3 style={{margin: "0px"}}>Hi, Rebecca! 👋</h3>
+          </div>
           <Tooltip title="Open settings">
             <IconButton onClick={handleOpenUserMenu}>
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <Avatar alt="Profile" src="../../assets/icons/ProfilePic.png" />
             </IconButton>
           </Tooltip>
         </Toolbar>
