@@ -52,7 +52,7 @@ export function Form() {
   }
 
   return (
-    <div
+    <form
       style={{
         width: "100%",
         display: "flex",
@@ -268,6 +268,6 @@ export function Form() {
           <input type="submit" value="Submit"></input>
         </a>
       </div>
-    </div>
+    </form>
   );
 }
