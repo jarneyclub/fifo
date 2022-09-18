@@ -15,10 +15,15 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = (props) => {
 
   const signInWithGoogle = async () => {
       setAuth(true);
-
       signInWithPopup(auth, new GoogleAuthProvider())
           .then((response) => {
-              console.log(response.user.uid);
+              const uid = response.user.uid;
+              const name = response.user.displayName;
+              const email = response.user.email;
+              const profilePic = response.user.photoURL;
+              localStorage.setItem("User_Name", name);
+              localStorage.setItem("User_Email", email);
+              localStorage.setItem("User_photo", profilePic);
               navigate('/'); // going back to homepage
           })
           .catch((error) => {
@@ -40,7 +45,7 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = (props) => {
         </div>
         <div className={styles.BodyBold}>Get your questions answered</div>
         {/* TODO merge the button and href into functional links */}
-        <button className="signin-with-google-btn" 
+        <button className="signin-with-google-btn"
         onClick={() => signInWithGoogle()} disabled={authing}>Continue with Google</button>
         <a className={styles.btn} href="/user/enrollment">
           <img
@@ -49,7 +54,6 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = (props) => {
             src={GoogleIcon}
           ></img>
         </a>
-        
       </div>
     </div>
   );
