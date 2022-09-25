@@ -48,20 +48,14 @@ export const CoursesList = () => {
   return (
     <section className={style.coursesListContainer}>
       <Toolbar disableGutters>
-        <h5>Host OH </h5>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <h5 style={{ color: "#008CFF" }}>TA</h5>
+        <h5>Courses</h5>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        
       </Toolbar>
 
       <div className={style.coursesContainer}>{renderedInstructorCourses}</div>
       <br />
-      <Toolbar disableGutters>
-        <a href="/user/student/comp40/check-queue">
-          <h5>Join Queue </h5>
-        </a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <h5 style={{ color: "#008CFF" }}>Student</h5>
-      </Toolbar>
+
 
       <div className={style.coursesContainer}>{renderedStudentCourses}</div>
     </section>

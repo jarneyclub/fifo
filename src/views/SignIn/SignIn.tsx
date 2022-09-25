@@ -44,7 +44,7 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = (props) => {
             className={styles.icon}
             alt={"Google Icon"}
             src={GoogleIcon}
-          /> Continue with your university credential!
+          /> Continue with your University credential through Google!
         </button>
         
       </div>
