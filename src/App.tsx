@@ -21,7 +21,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         {/* <Route path="/" element={<AuthRoute><Landing /></AuthRoute>} /> */}
-        <Route path="/sign-up" element={<Counter />}></Route>
         <Route path="/sign-in" element={<LoginPage />}></Route>
         <Route path="/account" element={<Counter />}></Route>
         {/* implementation to protect unauthorized access */}

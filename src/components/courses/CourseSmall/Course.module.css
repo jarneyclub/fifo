@@ -62,73 +62,61 @@ body a {
   text-decoration: none;
 }
 
-.tag {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 37px;
-  color: #008CFF;
-  background: #E5EBF9;
-  border-radius: 16.346px;
-  text-align: center;
-  margin-bottom: 15px;
-  width: auto;
-}
-
-.container {
-  width: 70%;
-  padding-top: 1rem;
-}
-
-.title {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1.5px solid #FFFFFF;
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
-}
-
-.button {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 130%;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  color: #008CFF;
-}
-
-.solid {
-  width: 95%;
-  border: none;
-  border-bottom: 0.8px solid #D9D9D9;
-}
-
-.main {
+.contentContainer {
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 0.8rem;
+  flex-direction: row;
+  width: 100%;
 }
 
-.group {
+.code {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 28px;
+  color: #3A3B3D;
+  color: #3A3B3D;
+}
+
+.leftContainer {
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .coursesListContainer {
-    margin: 6rem 3rem;
-  }
-  .select {
-    width: 100%;
-  }
-  .container {
-    width: 90%;
-  }
-  .main {
-    margin-bottom: 0;
-  }
-}/*# sourceMappingURL=Title.module.css.map */
+.name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #757B93;
+}
+
+.icon {
+  height: 70%;
+  width: auto;
+  margin-right: 20px;
+}
+
+.courseContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 0 20px;
+  height: 95.27px;
+  width: 100%;
+  cursor: pointer;
+  border: 0.5px solid #D9D9D9;
+  border-radius: 20px;
+  background: #F2F5FB;
+}
+.courseContainer .descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}/*# sourceMappingURL=Course.module.css.map */
