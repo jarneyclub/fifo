@@ -1,18 +1,97 @@
+h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 125.02%;
+  color: #273255;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125.02%;
+  color: #273255;
+}
+
+h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 130%;
+  color: #273255;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 130%;
+  color: #3A3B3D;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h6 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  color: #7C839E;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 28px;
+  color: #3A3B3D;
+  color: #3A3B3D;
+}
+
 .coursesListContainer {
   display: flex;
   flex-direction: column;
-  margin: 7rem 14rem;
+  margin: 9rem 14rem;
 }
 
 .coursesContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .coursesListContainer {
     margin: 6rem 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .coursesListContainer {
+    margin: 7.5rem 3rem;
   }
   .select {
     width: 100%;

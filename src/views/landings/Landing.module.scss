@@ -1,12 +1,22 @@
-$backGround: #EBEEF5;
+@use "../../App";
 
+body {
+  @include App.body;
+}
 
 .container {
-  background: $backGround;
+  background-color: App.$backGround;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   margin: 0;
   min-height: 100vh;
+  align-items: center;
+}
+
+.AddContainer {
+  width: 145px;
+  position: fixed;
+  bottom: 30px;
 }
