@@ -2,16 +2,17 @@ import React from 'react';
 
 import { Landing } from './views/landings/Landing';
 import { Counter } from './components/counter/Counter';
-import { JoinQueue } from "./views/JoinQueue/JoinQueue";
-import LoginPage  from "./views/SignIn/SignIn";
-import { Enroll } from "./views/enroll/Enroll";
-import { TAQueue } from "./views/TAQueue/TAQueue"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { auth } from "./config/firebase"
-import firebaseConfig from "./config/config"
+import { JoinQueue } from './views/JoinQueue/JoinQueue';
+import LoginPage from './views/SignIn/SignIn';
+import { Enroll } from './views/enroll/Enroll';
+import { TAQueue } from './views/TAQueue/TAQueue';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { auth } from './config/firebase';
+import firebaseConfig from './config/config';
 import { initializeApp } from 'firebase/app';
 import AuthRoute from './components/AuthRoute';
 import './App.css';
+import { ClockIn } from './views/ClockIn/ClockIn';
 
 initializeApp(firebaseConfig);
 
@@ -36,7 +37,7 @@ function App() {
         ></Route>
         <Route
           path="/user/instructor/comp40/clock-in"
-          element={<Counter />}
+          element={<ClockIn />}
         ></Route>
         <Route
           path="/user/instructor/comp40/check-queue"
