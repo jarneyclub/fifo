@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import styles from './SignIn.module.css';
+import styles from './SignIn.module.scss';
 import img from '../../assets/illustration/Illustration_Home_SignOn.png';
 import GoogleIcon from '../../assets/icons/Google.png';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../../config/firebase';
-// import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 export interface ILoginPageProps {}
 
@@ -15,16 +15,21 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = (props) => {
 
   const signInWithGoogle = async () => {
     setAuth(true);
-
-    // signInWithPopup(auth, new GoogleAuthProvider())
-    //     .then((response) => {
-    //         console.log(response.user.uid);
-    //         navigate('/'); // going back to homepage
-    //     })
-    //     .catch((error) => {
-    //         console.log(error);
-    //         setAuth(false);
-    //     });
+    signInWithPopup(auth, new GoogleAuthProvider())
+      .then((response) => {
+        const uid = response.user.uid;
+        const name = response.user.displayName;
+        const email = response.user.email;
+        const profilePic = response.user.photoURL;
+        localStorage.setItem('User_Name', name);
+        localStorage.setItem('User_Email', email);
+        localStorage.setItem('User_photo', profilePic);
+        navigate('/'); // going back to homepage
+      })
+      .catch((error) => {
+        console.log(error);
+        setAuth(false);
+      });
   };
 
   return (
@@ -39,21 +44,14 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = (props) => {
           Welcome to <span className={styles.blue}>FIFO</span>
         </div>
         <div className={styles.BodyBold}>Get your questions answered</div>
-        {/* TODO merge the button and href into functional links */}
         <button
-          className="signin-with-google-btn"
+          className={styles.btn}
           onClick={() => signInWithGoogle()}
           disabled={authing}
         >
-          Continue with Google
+          <img className={styles.icon} alt={'Google Icon'} src={GoogleIcon} />{' '}
+          Continue with your University credential through Google!
         </button>
-        <a className={styles.btn} href="/user/enrollment">
-          <img
-            className={styles.icon}
-            alt={'Google Icon'}
-            src={GoogleIcon}
-          ></img>
-        </a>
       </div>
     </div>
   );

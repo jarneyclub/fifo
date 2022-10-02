@@ -2,11 +2,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState, AppThunk } from '../../app/store';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import MediaQuery from 'react-responsive';
 
 import { CourseState, selectCourses } from './coursesSlice';
-import { Course } from './Course';
-import style from './CoursesList.module.scss';
+import { Course } from './CourseSmall/Course';
+import { CourseBig } from './CourseBig/CourseBig';
 import { Toolbar } from '@mui/material';
+
+import style from './CoursesList.module.scss';
 
 const instructorCourseStyle = {
   fontColor: { color: '#6A7290' },
@@ -36,8 +39,20 @@ const studentCourseStyle = {
 export const CoursesList = () => {
   const courses = useAppSelector(selectCourses);
 
-  const renderedInstructorCourses = courses.map((course) => (
+  const renderedInstructorCoursesSmall = courses.map((course) => (
     <Course courseInfo={course} customStyle={instructorCourseStyle} />
+  ));
+
+  const renderedStudentCoursesSmall = courses.map((course) => (
+    <Course courseInfo={course} customStyle={studentCourseStyle} />
+  ));
+
+  const renderedInstructorCoursesBig = courses.map((course) => (
+    <CourseBig courseInfo={course} customStyle={instructorCourseStyle} />
+  ));
+
+  const renderedStudentCoursesBig = courses.map((course) => (
+    <CourseBig courseInfo={course} customStyle={studentCourseStyle} />
   ));
 
   const renderedStudentCourses = courses.map((course) => (
@@ -47,23 +62,38 @@ export const CoursesList = () => {
   return (
     <section className={style.coursesListContainer}>
       <Toolbar disableGutters>
-        <h5>Host OH </h5>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <h5 style={{ color: '#008CFF' }}>TA</h5>
+        <div className={style.header2}>Instructor</div>
       </Toolbar>
 
-      <div className={style.coursesContainer}>{renderedInstructorCourses}</div>
+      <MediaQuery maxWidth={768}>
+        <div className={style.coursesContainer}>
+          {renderedInstructorCoursesSmall}
+        </div>
+        <br />
+      </MediaQuery>
 
-      <br />
+      <MediaQuery minWidth={769}>
+        <div className={style.coursesContainer}>
+          {renderedInstructorCoursesBig}
+        </div>
+        <br />
+      </MediaQuery>
+
       <Toolbar disableGutters>
-        <a href="/user/student/comp40/check-queue">
-          <h5>Join Queue </h5>
-        </a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <h5 style={{ color: '#008CFF' }}>Student</h5>
+        <div className={style.header2}>Student</div>
       </Toolbar>
 
-      <div className={style.coursesContainer}>{renderedStudentCourses}</div>
+      <MediaQuery maxWidth={768}>
+        <div className={style.coursesContainer}>
+          {renderedStudentCoursesSmall}
+        </div>
+      </MediaQuery>
+
+      <MediaQuery minWidth={769}>
+        <div className={style.coursesContainer}>
+          {renderedStudentCoursesBig}
+        </div>
+      </MediaQuery>
     </section>
   );
 };

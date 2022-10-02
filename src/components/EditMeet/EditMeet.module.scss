@@ -1,0 +1,29 @@
+@use "../../App";
+
+.wrapper {
+    background: rgba(235, 238, 245, 0.5);
+    border-radius: 10px;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: space-around;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+}
+
+.Subtitle {
+    @include App.Subtitle;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        justify-content: space-between;
+    }
+}

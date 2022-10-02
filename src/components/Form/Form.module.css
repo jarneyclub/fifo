@@ -57,6 +57,10 @@ body {
   border: 0;
   vertical-align: baseline;
 }
+body a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .selection {
   margin: 0.5rem 0;
@@ -84,6 +88,7 @@ body {
   line-height: 130%;
   color: #3A3B3D;
   margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
 .required {
@@ -153,12 +158,35 @@ body {
   text-align: center;
 }
 
+.submitContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .submitBtn {
+  margin: 2rem 2rem;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.submitBtn input {
   background: #606783;
   border: 2px solid #FFFFFF;
   border-radius: 30px;
   padding: 1.3rem 4rem;
   color: white;
-  margin: 0 2rem 1rem 2rem;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .submitBtn {
+    margin: 2rem 0;
+    width: 100%;
+  }
+  .submitBtn input {
+    width: 100%;
+  }
 }/*# sourceMappingURL=Form.module.css.map */

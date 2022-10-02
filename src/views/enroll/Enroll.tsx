@@ -11,7 +11,7 @@ export function Enroll() {
         title={"Add Class"}
         color={{ color: "white" }}
       />
-      <div className={styles.card}>
+      <form className={styles.card}>
         <div className={styles.Header1}>Enter Class Code to Add a Class</div>
         <input
           className={styles.ClassCode}
@@ -24,11 +24,11 @@ export function Enroll() {
           Code can be found in your syllabus
         </div>
         <Tooltip title="Add Class">
-          <a className={styles.btn} href="/user/courses">
+          <a className={styles.btn} href="/user/courses" type="submit">
             Add Class
           </a>
         </Tooltip>
-      </div>
+      </form>
     </div>
   );
 }

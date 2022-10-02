@@ -5,6 +5,7 @@ import { Counter } from './components/counter/Counter';
 import { JoinQueue } from './views/JoinQueue/JoinQueue';
 import LoginPage from './views/SignIn/SignIn';
 import { Enroll } from './views/enroll/Enroll';
+import { TAQueue } from './views/TAQueue/TAQueue';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { auth } from './config/firebase';
 import firebaseConfig from './config/config';
@@ -21,11 +22,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         {/* <Route path="/" element={<AuthRoute><Landing /></AuthRoute>} /> */}
-        <Route path="/sign-up" element={<Counter />}></Route>
         <Route path="/sign-in" element={<LoginPage />}></Route>
         <Route path="/account" element={<Counter />}></Route>
         {/* implementation to protect unauthorized access */}
-        <Route path="/user/courses" element={<LoginPage />}></Route>
+        <Route path="/user/courses" element={<Landing />}></Route>
         <Route path="/user/enrollment" element={<Enroll />}></Route>
         <Route
           path="/user/student/comp40/check-queue"
@@ -41,7 +41,7 @@ function App() {
         ></Route>
         <Route
           path="/user/instructor/comp40/check-queue"
-          element={<Counter />}
+          element={<TAQueue />}
         ></Route>
         <Route
           path="/user/instructor/comp40/view-detail"

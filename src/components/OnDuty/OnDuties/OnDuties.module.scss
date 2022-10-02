@@ -1,0 +1,20 @@
+@use "../../App";
+
+body {
+    @include App.body;
+}
+
+.Subtitle {
+    @include App.Subtitle;
+    color: App.$Blue;
+}
+
+.BodyNormal {
+    @include App.BodyNormal;
+    color: App.$DarkGray;
+}
+
+.BodySmall {
+    @include App.BodySmall;
+    color: App.$LightGray;
+}
