@@ -12,7 +12,7 @@ import firebaseConfig from './config/config';
 import { initializeApp } from 'firebase/app';
 import AuthRoute from './components/AuthRoute';
 import './App.css';
-import { ClockIn } from './components/ClockIn/ClockIn';
+import { ClockIn } from './views/ClockIn/ClockIn';
 
 initializeApp(firebaseConfig);
 
@@ -36,7 +36,7 @@ function App() {
           element={<JoinQueue />}
         ></Route>
         <Route
-          path="/user/instructor/comp40/ClockIn"
+          path="/user/instructor/comp40/clock-in"
           element={<ClockIn />}
         ></Route>
         <Route

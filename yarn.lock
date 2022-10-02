@@ -1369,7 +1369,7 @@
   "resolved" "https://registry.npmjs.org/@firebase/app-types/-/app-types-0.7.0.tgz"
   "version" "0.7.0"
 
-"@firebase/app@0.7.33", "@firebase/app@0.x":
+"@firebase/app@^0.7.32", "@firebase/app@0.7.33", "@firebase/app@0.x":
   "integrity" "sha512-7K7ljuFhbT9uF0gTvuA7ZrpFFnS1eJLplfjJdjDQFWyjD6Cwk0FXNdu75WvoWgywoQCGiVBX8u5Jb437UQIhWQ=="
   "resolved" "https://registry.npmjs.org/@firebase/app/-/app-0.7.33.tgz"
   "version" "0.7.33"
