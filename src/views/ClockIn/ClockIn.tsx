@@ -1,6 +1,8 @@
 //import React, { useState } from 'react';
 import * as React from 'react';
+import { useState } from 'react';
 import styles from './ClockIn.module.css';
+import { EditMeet } from '../../components/EditMeet/EditMeet';
 import {
   Typography,
   AppBar,
@@ -50,6 +52,16 @@ import { HeaderWBackBtn } from '../../components/HeaderWBackBtn/HeaderWBackBtn';
 // }));
 
 export function ClockIn() {
+  const [hybridClick, setHybridClick] = useState(false);
+
+  function handleHybrid(props: any) {
+    if (props === 'Hybrid') {
+      setHybridClick(true);
+    } else {
+      setHybridClick(false);
+    }
+  }
+
   return (
     <div className={styles.Container}>
       {/* <AppBar position="fixed">
@@ -69,7 +81,7 @@ export function ClockIn() {
         // color={{ color: 'black'}}
       />
 
-      <Card style={{ width: '50%', padding: '10px' }}>
+      <Card className={styles.card}>
         <Typography
           style={{ width: '80%', margin: 'auto', padding: '30px' }}
           variant="h3"
@@ -79,7 +91,8 @@ export function ClockIn() {
 
         <FormGroup>
           <FormControlLabel
-            // variant={OutlinedInput}
+            value={'zoom'}
+            id={'zoom'}
             style={{
               width: '80%',
               margin: 'auto',
@@ -93,6 +106,8 @@ export function ClockIn() {
             }
           />
           <FormControlLabel
+            value={'in-person'}
+            id={'in-person'}
             style={{ width: '80%', margin: 'auto', padding: '25px' }}
             control={<Radio />}
             label={
@@ -102,6 +117,8 @@ export function ClockIn() {
             }
           />
           <FormControlLabel
+            value={'hybrid'}
+            id={'hybrid'}
             style={{ width: '80%', margin: 'auto', padding: '25px' }}
             control={<Radio />}
             label={
@@ -109,22 +126,26 @@ export function ClockIn() {
                 Hybrid
               </Typography>
             }
+            onClick={() => handleHybrid('Hybrid')}
           />
-          <Button
-            style={{
-              width: '80%',
-              margin: 'auto',
-              marginTop: '20px',
-              padding: '20px',
-              fontSize: '1.5rem',
-            }}
-            variant="contained"
-            color="primary"
-          >
-            Submit
-          </Button>
+          {hybridClick ? <EditMeet meetMode="Hybrid" /> : null}
         </FormGroup>
       </Card>
+      <Button
+        style={{
+          width: '50%',
+          margin: 'auto',
+          marginTop: '20px',
+          padding: '20px',
+          fontSize: '1.5rem',
+          borderRadius: '15px',
+          backgroundColor: '#008CFF',
+        }}
+        variant="contained"
+        color="primary"
+      >
+        Submit
+      </Button>
     </div>
   );
 }
