@@ -56,8 +56,9 @@ export function ClockIn() {
 
   function handleHybrid(props: any) {
     if (props === 'Hybrid') {
-      setHybridClick(true);
-    } else {
+      setHybridClick(!hybridClick);
+    }
+    else {
       setHybridClick(false);
     }
   }
@@ -76,70 +77,76 @@ export function ClockIn() {
       </AppBar> */}
 
       <HeaderWBackBtn
-        path={'/'}
-        title={'TA Clock-In'}
+        path={"/"}
+        title={"TA Clock In - CS 11"}
         // color={{ color: 'black'}}
       />
 
       <Card className={styles.card}>
-        <Typography
-          style={{ width: '80%', margin: 'auto', padding: '30px' }}
-          variant="h3"
-        >
-          Best way to meet?
-        </Typography>
+        <div className={styles.content}>
+          <div className={styles.h3}> Best way to meet?</div>
 
-        <FormGroup>
-          <FormControlLabel
-            value={'zoom'}
-            id={'zoom'}
-            style={{
-              width: '80%',
-              margin: 'auto',
-              padding: '25px',
-            }}
-            control={<Radio defaultChecked />}
-            label={
-              <Typography variant="body2" color="black" fontSize="1.5rem">
-                Zoom
-              </Typography>
-            }
-          />
-          <FormControlLabel
-            value={'in-person'}
-            id={'in-person'}
-            style={{ width: '80%', margin: 'auto', padding: '25px' }}
-            control={<Radio />}
-            label={
-              <Typography variant="body2" color="black" fontSize="1.5rem">
-                In-Person
-              </Typography>
-            }
-          />
-          <FormControlLabel
-            value={'hybrid'}
-            id={'hybrid'}
-            style={{ width: '80%', margin: 'auto', padding: '25px' }}
-            control={<Radio />}
-            label={
-              <Typography variant="body2" color="black" fontSize="1.5rem">
-                Hybrid
-              </Typography>
-            }
-            onClick={() => handleHybrid('Hybrid')}
-          />
-          {hybridClick ? <EditMeet meetMode="Hybrid" /> : null}
-        </FormGroup>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
+          >
+            <FormControlLabel
+              value="zoom"
+              id="zoom"
+              style={{
+                width: "100%",
+                padding: "10px 18px",
+                border: "1px solid #D9D9D9",
+                borderRadius: "10px",
+                marginBottom: "20px",
+              }}
+              control={<Radio defaultChecked />}
+              label={<div className={styles.subTitle}>Zoom</div>}
+              onClick={() => handleHybrid("Zoom")}
+            />
+            <FormControlLabel
+              value="in-person"
+              id="in-person"
+              style={{
+                width: "100%",
+                padding: "10px 18px",
+                border: "1px solid #D9D9D9",
+                borderRadius: "10px",
+                marginBottom: "20px",
+              }}
+              control={<Radio />}
+              label={<div className={styles.subTitle}>In-Person</div>}
+              onClick={() => handleHybrid("in-person")}
+            />
+            <FormControlLabel
+              value="hybrid"
+              id="hybrid"
+              style={{ width: "100%", padding: "10px 18px" }}
+              control={<Radio />}
+              label={
+                <div className={styles.subTitle}>Hybrid</div>
+                // <Typography variant="body2" color="black" fontSize="1.5rem">
+                //   Hybrid
+                // </Typography>
+              }
+              onClick={() => handleHybrid("Hybrid")}
+            />
+            {hybridClick ? <EditMeet meetMode="Hybrid" /> : null}
+          </RadioGroup>
+        </div>
       </Card>
+
       <Button
+        href="/user/instructor/comp40/check-queue"
         style={{
-          width: '50%',
-          margin: 'auto',
-          marginTop: '20px',
-          padding: '20px',
-          fontSize: '1.5rem',
-          borderRadius: '15px',
-          backgroundColor: '#008CFF',
+          width: "50%",
+          margin: "auto",
+          marginTop: "20px",
+          padding: "20px",
+          fontSize: "1.5rem",
+          borderRadius: "15px",
+          backgroundColor: "#008CFF",
+          textTransform: "capitalize",
         }}
         variant="contained"
         color="primary"

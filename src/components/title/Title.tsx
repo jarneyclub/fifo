@@ -18,9 +18,11 @@ const customStyle = {
     backdropFilter: "blur(50px)",
     display: "flex",
     alignItems: "center",
+    marginTop: "1rem",
   },
   toolbar: {
-    justifyContent: "space-between",
+    justifyContent: "center",
+    width: "100%",
   },
 };
 
@@ -35,8 +37,9 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar elevation={0} position="fixed" sx={customStyle.title}>
-      <div className={style.container}>
-        <Toolbar disableGutters sx={customStyle.toolbar}>
+      {/* <div className={style.container}> */}
+      <Toolbar disableGutters sx={customStyle.toolbar}>
+        <div className={style.content}>
           <div className={style.main}>
             <MediaQuery maxWidth={768}>
               <h6>FIFO Queue</h6>
@@ -60,8 +63,9 @@ const ResponsiveAppBar = () => {
               <Avatar sx={{ width: 65, height: 65 }} alt="Profile" src={pic} />
             </IconButton>
           </Tooltip>
-        </Toolbar>
-      </div>
+        </div>
+      </Toolbar>
+      {/* </div> */}
       <hr className={style.solid} />
     </AppBar>
   );

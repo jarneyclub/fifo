@@ -74,7 +74,7 @@ body a {
 .coursesListContainer {
   display: flex;
   flex-direction: column;
-  margin: 9rem 14rem;
+  margin: 9rem 14%;
 }
 
 .coursesContainer {
@@ -86,12 +86,12 @@ body a {
 
 @media (max-width: 950px) {
   .coursesListContainer {
-    margin: 6rem 3rem;
+    margin: 6rem 6%;
   }
 }
 @media (max-width: 768px) {
   .coursesListContainer {
-    margin: 7.5rem 3rem;
+    margin: 7.5rem 6%;
   }
   .select {
     width: 100%;
