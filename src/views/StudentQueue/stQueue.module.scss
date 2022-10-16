@@ -1,0 +1,112 @@
+@use "../../App";
+
+body {
+    @include App.body;
+}
+
+.container {
+    @include App.container;
+    background: #F5F8FF;
+}
+
+.content {
+    @include App.container;
+    width: 100%;
+    background-color: transparent;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background: pink;
+    margin-left: 1rem;
+    opacity: 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+.Header1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 130%;
+    color: #3A3B3D;
+    margin-bottom: 15px;
+    order: 1;
+}
+
+.Header4 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 130%;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #008CFF;
+}
+
+.Header3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 130%;
+    color: #757B93;
+}
+
+.title {
+    width: 55%;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 10px;
+    padding-bottom: 3px;
+    color: #757B93;
+}
+
+.subtitleBlue {
+    @include App.Subtitle;
+    color: App.$blue;
+    margin-bottom: 5px;
+}
+
+.btn {
+    background-color: App.$blue;
+    width: 20%;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: white;
+    border-radius: 30px;
+     margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+    .title {
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .content {
+        width: 80%;
+        display: flex;
+    }
+}

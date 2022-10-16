@@ -1,4 +1,4 @@
-@use "../../App";
+@use "../../../App.scss";
 
 body {
     @include App.body;
@@ -6,15 +6,21 @@ body {
 
 .Subtitle {
     @include App.Subtitle;
-    color: App.$Blue;
+    color: App.$blue;
+}
+
+.Header3 {
+    @include App.Header3;
+    color: App.$blue;
+    margin-bottom: 14px;
 }
 
 .BodyNormal {
     @include App.BodyNormal;
-    color: App.$DarkGray;
+    color: App.$darkGray;
 }
 
 .BodySmall {
     @include App.BodySmall;
-    color: App.$LightGray;
+    color: App.$lightGray;
 }
