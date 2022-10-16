@@ -76,9 +76,11 @@ body a {
   width: auto;
 }
 
-.container {
-  width: 70%;
-  padding-top: 1rem;
+.content {
+  width: 78%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .title {
@@ -118,17 +120,8 @@ body a {
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .coursesListContainer {
-    margin: 6rem 3rem;
-  }
-  .select {
-    width: 100%;
-  }
-  .container {
+@media (max-width: 950px) {
+  .content {
     width: 90%;
-  }
-  .main {
-    margin-bottom: 0;
   }
 }/*# sourceMappingURL=Title.module.css.map */

@@ -235,6 +235,25 @@ body {
   padding-bottom: 1.3rem;
 }
 
+.student {
+  display: flex;
+  flex-direction: row;
+  background-color: pink;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  background: transparent;
+}
+
+.number {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 28px;
+  color: #757B93;
+  margin: 0 20px;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 100%;

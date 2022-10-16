@@ -166,6 +166,8 @@ body {
   background: #FFFFFF;
   /* Box(Glass & Shadow) */
   box-shadow: 3px 4px 10px 3px rgba(191, 191, 191, 0.27);
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
 }
 
 .profile {
@@ -188,6 +190,13 @@ body {
   width: 100%;
 }
 
+.selection hr {
+  display: block;
+  width: 95%;
+  border: 0.5px solid #EAEAEA;
+  border-radius: 15px;
+}
+
 .selection label {
   font-style: normal;
   font-weight: 500;
@@ -195,4 +204,35 @@ body {
   line-height: 21px;
   color: #3A3B3D;
   color: #757B93;
+}
+
+.number {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 28px;
+  color: #757B93;
+  margin: 0 20px;
+}
+
+.student {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  background: transparent;
+}
+
+.showAll {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #757B93;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.8rem;
+  padding-bottom: 1.3rem;
 }
