@@ -15,12 +15,10 @@ export interface CourseState {
 }
 
 const initialState: Array<CourseState> = [
-  {id: 's233', code: 'CS 11', name: 'Intro to Computer Science', role: 'instructor', path: '/user/student/comp40/check-queue'},
+  {id: 's233', code: 'CS 11', name: 'Intro to Computer Science', role: 'instructor', path: '/user/instructor/comp40/clock-in'},
   {id: 's133', code: 'CS 20', name: 'Web Programming', role: 'student', path: '/user/student/comp40/check-queue'},
   {id: 's133', code: 'CS 160', name: 'Algorithms', role: 'student', path: '/user/student/comp40/check-queue'},
 ]
-
-
 
 
 export const coursesSlice = createSlice({
@@ -28,15 +26,9 @@ export const coursesSlice = createSlice({
   initialState,
   reducers: {
     fetchCourses: (state) => {
-
     }
   }
 })
 
 export const selectCourses = (state: RootState) => state.courses;
 export default coursesSlice.reducer;
-
-
-
-
-

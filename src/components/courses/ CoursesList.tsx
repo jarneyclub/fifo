@@ -39,25 +39,57 @@ const studentCourseStyle = {
 export const CoursesList = () => {
   const courses = useAppSelector(selectCourses);
 
-  const renderedInstructorCoursesSmall = courses.map((course) => (
-    <Course courseInfo={course} customStyle={instructorCourseStyle} />
-  ));
+  // const renderedInstructorCoursesSmall = courses.map((course) => (
+  //   <Course courseInfo={course} customStyle={instructorCourseStyle} />
+  // ));
 
-  const renderedStudentCoursesSmall = courses.map((course) => (
-    <Course courseInfo={course} customStyle={studentCourseStyle} />
-  ));
+  const renderedInstructorCoursesSmall = courses
+    .filter((course) => course.role.includes("instructor"))
+    .map((filteredCourse) => (
+      <Course
+        courseInfo={filteredCourse}
+        customStyle={instructorCourseStyle}
+      />
+    ));
 
-  const renderedInstructorCoursesBig = courses.map((course) => (
-    <CourseBig courseInfo={course} customStyle={instructorCourseStyle} />
-  ));
+  // const renderedStudentCoursesSmall = courses.map((course) => (
+  //   <Course courseInfo={course} customStyle={studentCourseStyle} />
+  // ));
 
-  const renderedStudentCoursesBig = courses.map((course) => (
-    <CourseBig courseInfo={course} customStyle={studentCourseStyle} />
-  ));
+  const renderedStudentCoursesSmall = courses
+    .filter((course) => course.role.includes("student"))
+    .map((filteredCourse) => (
+      <Course
+        courseInfo={filteredCourse}
+        customStyle={instructorCourseStyle}
+      />
+    ));
 
-  const renderedStudentCourses = courses.map((course) => (
-    <Course courseInfo={course} customStyle={studentCourseStyle} />
-  ));
+  const renderedInstructorCoursesBig = courses
+    .filter((course) => course.role.includes("instructor"))
+    .map((filteredCourse) => (
+      <CourseBig
+        courseInfo={filteredCourse}
+        customStyle={instructorCourseStyle}
+      />
+    ));
+
+  // const renderedStudentCoursesBig = courses.map((course) => (
+  //   <CourseBig courseInfo={course} customStyle={studentCourseStyle} />
+  // ));
+
+  const renderedStudentCoursesBig = courses
+    .filter((course) => course.role.includes("student"))
+    .map((filteredCourse) => (
+      <CourseBig
+        courseInfo={filteredCourse}
+        customStyle={instructorCourseStyle}
+      />
+    ));
+
+  // const renderedStudentCourses = courses.map((course) => (
+  //   <Course courseInfo={course} customStyle={studentCourseStyle} />
+  // ));
 
   return (
     <section className={style.coursesListContainer}>
