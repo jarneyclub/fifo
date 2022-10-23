@@ -1,4 +1,4 @@
-@use "../../App";
+@use '../../App';
 
 body {
   @include App.body;
@@ -21,7 +21,12 @@ body {
 }
 
 .subTitle {
-    @include App.Subtitle;
+  @include App.Subtitle;
+}
+
+.subTitleClick {
+  @include App.Subtitle;
+  color: #008cff;
 }
 
 .card {
