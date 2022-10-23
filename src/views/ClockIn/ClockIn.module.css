@@ -90,6 +90,15 @@ body a {
   color: #3A3B3D;
 }
 
+.subTitleClick {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #3A3B3D;
+  color: #008cff;
+}
+
 .card {
   width: 50%;
   background: rgba(255, 255, 255, 0.9);

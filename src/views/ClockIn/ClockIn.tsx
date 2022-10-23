@@ -53,12 +53,39 @@ import { HeaderWBackBtn } from '../../components/HeaderWBackBtn/HeaderWBackBtn';
 
 export function ClockIn() {
   const [hybridClick, setHybridClick] = useState(false);
+  const [zoomClick, setZoomClick] = useState(false);
+  const [inPersonClick, setInPersonClick] = useState(false);
 
-  function handleHybrid(props: any) {
-    if (props === 'Hybrid') {
+  const labelStyle1 = {
+    width: '100%',
+    padding: '10px 18px',
+    border: '1px solid #D9D9D9',
+    borderRadius: '10px',
+    marginBottom: '20px',
+  };
+
+  const labelStyle2 = {
+    width: '100%',
+    padding: '10px 18px',
+    border: '1px solid #008CFF',
+    borderRadius: '10px',
+    marginBottom: '20px',
+  };
+
+  function handleChange(props: any) {
+    if (props === 'hybrid') {
+      console.log('here');
       setHybridClick(!hybridClick);
-    }
-    else {
+      setZoomClick(false);
+      setInPersonClick(false);
+      // labelStyle = labelStyle1;
+    } else if (props === 'zoom') {
+      setZoomClick(!zoomClick);
+      setHybridClick(false);
+      setInPersonClick(false);
+    } else {
+      setInPersonClick(!inPersonClick);
+      setZoomClick(false);
       setHybridClick(false);
     }
   }
@@ -77,8 +104,8 @@ export function ClockIn() {
       </AppBar> */}
 
       <HeaderWBackBtn
-        path={"/"}
-        title={"TA Clock In - CS 11"}
+        path={'/'}
+        title={'TA Clock In - CS 11'}
         // color={{ color: 'black'}}
       />
 
@@ -93,45 +120,59 @@ export function ClockIn() {
             <FormControlLabel
               value="zoom"
               id="zoom"
-              style={{
-                width: "100%",
-                padding: "10px 18px",
-                border: "1px solid #D9D9D9",
-                borderRadius: "10px",
-                marginBottom: "20px",
-              }}
+              style={zoomClick ? labelStyle2 : labelStyle1}
               control={<Radio defaultChecked />}
-              label={<div className={styles.subTitle}>Zoom</div>}
-              onClick={() => handleHybrid("Zoom")}
+              label={
+                <div
+                  className={zoomClick ? styles.subTitleClick : styles.subTitle}
+                >
+                  Zoom
+                </div>
+              }
+              onClick={() => handleChange('zoom')}
             />
             <FormControlLabel
               value="in-person"
               id="in-person"
-              style={{
-                width: "100%",
-                padding: "10px 18px",
-                border: "1px solid #D9D9D9",
-                borderRadius: "10px",
-                marginBottom: "20px",
-              }}
+              style={inPersonClick ? labelStyle2 : labelStyle1}
               control={<Radio />}
-              label={<div className={styles.subTitle}>In-Person</div>}
-              onClick={() => handleHybrid("in-person")}
+              label={
+                <div
+                  className={
+                    inPersonClick ? styles.subTitleClick : styles.subTitle
+                  }
+                >
+                  In-Person
+                </div>
+              }
+              onClick={() => handleChange('in-person')}
             />
             <FormControlLabel
               value="hybrid"
               id="hybrid"
-              style={{ width: "100%", padding: "10px 18px" }}
+              style={hybridClick ? labelStyle2 : labelStyle1}
               control={<Radio />}
               label={
-                <div className={styles.subTitle}>Hybrid</div>
+                <div
+                  className={
+                    hybridClick ? styles.subTitleClick : styles.subTitle
+                  }
+                >
+                  Hybrid
+                </div>
                 // <Typography variant="body2" color="black" fontSize="1.5rem">
                 //   Hybrid
                 // </Typography>
               }
-              onClick={() => handleHybrid("Hybrid")}
+              onClick={() => handleChange('hybrid')}
             />
-            {hybridClick ? <EditMeet meetMode="Hybrid" /> : null}
+
+            {hybridClick ? (
+              <div>
+                <EditMeet meetMode="Room 101, JCC" />
+                <EditMeet meetMode="Default OH Zoom" />
+              </div>
+            ) : null}
           </RadioGroup>
         </div>
       </Card>
@@ -139,14 +180,14 @@ export function ClockIn() {
       <Button
         href="/user/instructor/comp40/check-queue"
         style={{
-          width: "50%",
-          margin: "auto",
-          marginTop: "20px",
-          padding: "20px",
-          fontSize: "1.5rem",
-          borderRadius: "15px",
-          backgroundColor: "#008CFF",
-          textTransform: "capitalize",
+          width: '50%',
+          margin: 'auto',
+          marginTop: '20px',
+          padding: '20px',
+          fontSize: '1.5rem',
+          borderRadius: '15px',
+          backgroundColor: '#008CFF',
+          textTransform: 'capitalize',
         }}
         variant="contained"
         color="primary"

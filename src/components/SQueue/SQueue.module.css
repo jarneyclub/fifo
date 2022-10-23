@@ -238,7 +238,6 @@ body {
 .student {
   display: flex;
   flex-direction: row;
-  background-color: pink;
   align-items: center;
   padding: 1rem 0.5rem;
   background: transparent;
